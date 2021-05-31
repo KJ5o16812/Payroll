@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import payroll.Transaction;
+
 public class AddEmployeeTest {
 
 	//添加小时工资雇员
