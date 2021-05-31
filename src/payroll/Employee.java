@@ -4,6 +4,7 @@ public class Employee {
 	private int empId;
 	private String name;
 	private String address;
+	private PaymentClassification paymentClassification;
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}
@@ -30,6 +31,12 @@ public class Employee {
 		this.empId = empId;
 		this.name = name;
 		this.address = address;
+	}
+	public PaymentClassification getPaymentClassification() {
+		return paymentClassification;
+	}
+	public void setPaymentClassification(PaymentClassification paymentClassification) {
+		this.paymentClassification = paymentClassification;
 	}
 	
 }
