@@ -8,6 +8,7 @@ import payroll.Employee;
 import payroll.PaymentClassification;
 import payroll.PayrollDatabase;
 import payroll.Transaction;
+import payroll.classification.HourlyClassification;
 import payroll.trans.AddHourlyEmployeeTransaction;
 
 public class AddEmployeeTest {
@@ -25,7 +26,7 @@ public class AddEmployeeTest {
 		Employee e=PayrollDatabase.getEmployee(empId);//根据雇员编号读取雇员记录
 		assertNotNull(e);//雇员记录存在
 		assertEquals(name,e.getName());//名字正确
-		assertEquals(address,e.getAddres());
+		assertEquals(address,e.getAddress());
 		PaymentClassification pc =e.getPaymentClassification();
 		assertTrue(pc instanceof HourlyClassification);//钟点工
 		HourlyClassification hc =(HourlyClassification) pc;
