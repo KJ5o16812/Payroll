@@ -9,7 +9,13 @@ public class PayrollDatabase {
 
 	public static Employee getEmployee(int empId) {
 		// TODO Auto-generated method stub
-		return null;
+		return employees.get(empId);
 	}
+
+	public static void save(Employee employee) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }
