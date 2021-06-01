@@ -10,8 +10,10 @@ import payroll.PaymentMethod;
 import payroll.PayrollDatabase;
 import payroll.Transaction;
 import payroll.classification.HourlyClassification;
+import payroll.classification.SalariedClassification;
 import payroll.method.HoldMethod;
 import payroll.trans.AddHourlyEmployeeTransaction;
+import payroll.trans.AddSalariedEmployeeTransaction;
 
 public class AddEmployeeTest {
 
@@ -58,6 +60,10 @@ public class AddEmployeeTest {
 		PaymentMethod pm = e.getPaymentMethod();
 		assertTrue(pm instanceof HoldMethod);//支付方式默认为保存支票
 		
+	}
+	private PaymentClassification SalariedClassification() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	@Test
 	public void test() {
