@@ -54,7 +54,7 @@ public class AddEmployeeTest {
 		assertEquals(name,e.getName());//名字正确
 		assertEquals(address,e.getAddress());
 		PaymentClassification pc =e.getPaymentClassification();
-		assertTrue(pc instanceof SalariedClassification());//钟点工
+		assertTrue(pc instanceof SalariedClassification);//钟点工
 		SalariedClassification hc =(SalariedClassification) pc;
 		assertEquals(salary,hc.getSalary(),0.01);//小时工资正确
 		PaymentMethod pm = e.getPaymentMethod();
