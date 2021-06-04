@@ -10,10 +10,9 @@ public class AddHourlyEmployeeTransaction extends AddEmployeeTransaction impleme
 	private double hourlyRate;
 
 	public AddHourlyEmployeeTransaction(int empId, String name, String address, double hourlyRate) {
-		this.empId = empId;
+		super(empId,name,address);
 		// TODO Auto-generated constructor stub
-		this.name = name;
-		this.address = address;
+		
 		this.hourlyRate = hourlyRate;
 	}
 
