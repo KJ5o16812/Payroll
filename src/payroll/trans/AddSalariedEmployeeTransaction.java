@@ -26,10 +26,14 @@ public class AddSalariedEmployeeTransaction implements Transaction {
 	public void execute() {
 		// TODO Auto-generated method stub
 		Employee employee =new Employee(empId,name,address);
-		employee.setPaymentClassification(new SalariedClassification(salary));
+		employee.setPaymentClassification(getPaymentClassification());
 		employee.setPaymentMethod(new HoldMethod());
 		PayrollDatabase.save(employee);
 
 	}
+	protected SalariedClassification getPaymentClassification(){
+		return new SalariedClassification(salary);
+	}
 
+	
 }
