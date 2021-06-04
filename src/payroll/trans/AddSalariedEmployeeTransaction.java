@@ -4,6 +4,7 @@ import payroll.Employee;
 import payroll.PayrollDatabase;
 import payroll.Transaction;
 import payroll.classification.HourlyClassification;
+import payroll.classification.SalariedClassification;
 import payroll.method.HoldMethod;
 
 public class AddSalariedEmployeeTransaction implements Transaction {
