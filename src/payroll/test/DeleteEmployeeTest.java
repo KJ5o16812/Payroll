@@ -23,6 +23,16 @@ public class DeleteEmployeeTest {
 		Employee e=PayrollDatabase.getEmployee(empId);
 		assertNull(e);
 	}
+	public void testDeleteEmployeeNotExisted(){
+		int empId = 2002;
+		Employee employee=PayrollDatabase.getEmployee(empId);
+		assertNull(employee);
+		Transaction t =new DeleteEmployeeTransaction(empId);
+		t.execute();
+		
+		
+		
+	}
 	public void test() {
 		fail("Not yet implemented");
 	}
