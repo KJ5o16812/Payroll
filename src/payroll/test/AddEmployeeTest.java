@@ -12,6 +12,8 @@ import payroll.Transaction;
 import payroll.classification.HourlyClassification;
 import payroll.classification.SalariedClassification;
 import payroll.method.HoldMethod;
+import payroll.trans.AddCommisionedEmployeeTransaction;
+import payroll.trans.AddCommissionedEmployeeTransaction;
 import payroll.trans.AddHourlyEmployeeTransaction;
 import payroll.trans.AddSalariedEmployeeTransaction;
 
@@ -24,7 +26,7 @@ public class AddEmployeeTest {
 		String address = "Home";
 		double hourlyRate = 12.5;	
 	//新建添加钟点工操作，并执行
-		Transaction t =new AddHourlyEmployeeTransaction(empId, name ,address, hourlyRate);
+		Transaction t =new AddHourlyEmployeeTransaction(empId, name ,address,hourlyRate);
 		t.execute();
 		//验证执行结果
 		Employee e=PayrollDatabase.getEmployee(empId);//根据雇员编号读取雇员记录
@@ -46,7 +48,7 @@ public class AddEmployeeTest {
 		String address = "Home";
 		double salary = 2410.0;	
 	//新建添加钟点工操作，并执行
-		Transaction t =new AddSalariedEmployeeTransaction(empId, name ,address, salary);
+		Transaction t =new AddCommissionedEmployeeTransaction(empId, name ,address, salary,commissionRate);
 		t.execute();
 		//验证执行结果
 		Employee e=PayrollDatabase.getEmployee(empId);//根据雇员编号读取雇员记录
@@ -54,8 +56,8 @@ public class AddEmployeeTest {
 		assertEquals(name,e.getName());//名字正确
 		assertEquals(address,e.getAddress());
 		PaymentClassification pc =e.getPaymentClassification();
-		assertTrue(pc instanceof SalariedClassification);//钟点工
-		SalariedClassification hc =(SalariedClassification) pc;
+		assertTrue(pc instanceof CommissionedClassification);//钟点工
+		CommissionedClassification hc =(CommissionedClassification) pc;
 		assertEquals(salary,hc.getSalary(),0.01);//小时工资正确
 		PaymentMethod pm = e.getPaymentMethod();
 		assertTrue(pm instanceof HoldMethod);//支付方式默认为保存支票
