@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import payroll.Transaction;
 import payroll.trans.AddHourlyEmployeeTransaction;
 
 public class DeleteEmployeeTest {
@@ -13,6 +14,8 @@ public class DeleteEmployeeTest {
 		int empId=2001;
 		new AddHourlyEmployeeTransaction(empId,"Bill","Home",12.5).execute();
 		
+		Transaction t =new DeleteEmployeeTransaction(empId);
+		t.execute();
 	}
 	public void test() {
 		fail("Not yet implemented");
