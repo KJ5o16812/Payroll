@@ -9,6 +9,7 @@ import payroll.PaymentClassification;
 import payroll.PaymentMethod;
 import payroll.PayrollDatabase;
 import payroll.Transaction;
+import payroll.classification.CommissionedClassification;
 import payroll.classification.HourlyClassification;
 import payroll.classification.SalariedClassification;
 import payroll.method.HoldMethod;
@@ -57,10 +58,11 @@ public class AddEmployeeTest {
 		assertEquals(address,e.getAddress());
 		PaymentClassification pc =e.getPaymentClassification();
 		assertTrue(pc instanceof CommissionedClassification);//钟点工
-		CommissionedClassification hc =(CommissionedClassification) pc;
-		assertEquals(salary,hc.getSalary(),0.01);//小时工资正确
-		PaymentMethod pm = e.getPaymentMethod();
-		assertTrue(pm instanceof HoldMethod);//支付方式默认为保存支票
+		CommissionedClassification sc =(CommissionedClassification) pc;
+		assertEquals(salary,sc.getSalary(),0.01);//小时工资正确
+		assertEquals(commissionRate,sc.getCommissionRate(),0.0001);
+		
+		
 		
 	}
 	private PaymentClassification SalariedClassification() {
