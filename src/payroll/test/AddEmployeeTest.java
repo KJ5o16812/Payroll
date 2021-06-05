@@ -13,7 +13,7 @@ import payroll.classification.CommissionedClassification;
 import payroll.classification.HourlyClassification;
 import payroll.classification.SalariedClassification;
 import payroll.method.HoldMethod;
-import payroll.trans.AddCommisionedEmployeeTransaction;
+
 import payroll.trans.AddCommissionedEmployeeTransaction;
 import payroll.trans.AddHourlyEmployeeTransaction;
 import payroll.trans.AddSalariedEmployeeTransaction;
@@ -48,6 +48,7 @@ public class AddEmployeeTest {
 		String name = "Bill";
 		String address = "Home";
 		double salary = 2410.0;	
+		double commissionRate=0.02;
 	//新建添加钟点工操作，并执行
 		Transaction t =new AddCommissionedEmployeeTransaction(empId, name ,address, salary,commissionRate);
 		t.execute();
@@ -65,7 +66,7 @@ public class AddEmployeeTest {
 		
 		
 	}
-	private PaymentClassification SalariedClassification() {
+	private PaymentClassification CommissionedClassification() {
 		// TODO Auto-generated method stub
 		return null;
 	}
