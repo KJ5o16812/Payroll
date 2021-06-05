@@ -16,6 +16,11 @@ public class DeleteEmployeeTransaction implements Transaction {
 	@Override
 	public void execute() {
 		Employee employee =PayrollDatabase.getEmployee(empId);
+		if(employee!=null){
+			PayrollDatabase.deleteEmployee(empId);
+		}else{
+			throw new NoSuchEmployeeException("No such employee empId="+ empId);
+		}
 	}
 
 }
