@@ -7,6 +7,7 @@ import org.junit.Test;
 import payroll.Employee;
 import payroll.PayrollDatabase;
 import payroll.Transaction;
+import payroll.exception.NoSuchEmployeeException;
 import payroll.trans.AddHourlyEmployeeTransaction;
 import payroll.trans.DeleteEmployeeTransaction;
 
@@ -28,8 +29,12 @@ public class DeleteEmployeeTest {
 		Employee employee=PayrollDatabase.getEmployee(empId);
 		assertNull(employee);
 		Transaction t =new DeleteEmployeeTransaction(empId);
+		try{
 		t.execute();
-		
+		fail("No such employee");
+		}catch(Exception e){
+			assertTrue(e instanceof NoSuchEmployeeException);
+		}
 		
 		
 	}
