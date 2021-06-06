@@ -22,9 +22,9 @@ public class Paycheck {
 		return amount;
 	}
 
-	public Object getDisposition() {
+	public String getDisposition() {
 		// TODO Auto-generated method stub
-		return null;
+		return disposition;
 	}
 
 	public void setEmpId(int empId) {
