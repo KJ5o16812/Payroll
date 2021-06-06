@@ -3,15 +3,16 @@ package payroll;
 public class Paycheck {
 
 	private int empId;
+	private String name;
 
 	public int getEmpId() {
 		// TODO Auto-generated method stub
 		return empId;
 	}
 
-	public Object getName() {
+	public String getName() {
 		// TODO Auto-generated method stub
-		return null;
+		return name;
 	}
 
 	public double getAmount() {
@@ -26,6 +27,12 @@ public class Paycheck {
 
 	public void setEmpId(int empId) {
 		this.empId = empId;
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setName(String name) {
+		this.name = name;
 		// TODO Auto-generated method stub
 		
 	}
