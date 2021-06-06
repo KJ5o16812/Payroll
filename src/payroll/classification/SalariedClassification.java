@@ -15,7 +15,7 @@ public class SalariedClassification extends PaymentClassification {
 		return salary;
 	}
 	public double calculatePay(){
-		return 0;
+		return salary;
 	}
 
 }
