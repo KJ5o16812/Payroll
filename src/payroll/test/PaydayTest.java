@@ -7,6 +7,7 @@ import org.junit.Test;
 import payroll.Employee;
 import payroll.PayrollDatabase;
 import payroll.trans.AddSalariedEmployeeTransaction;
+import payroll.trans.PaydayTransaction;
 
 public class PaydayTest {
 
