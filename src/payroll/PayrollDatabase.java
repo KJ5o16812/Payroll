@@ -1,5 +1,6 @@
 package payroll;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public class PayrollDatabase {
 
 	public static List<Employee> listEmployee() {
 		// TODO Auto-generated method stub
-		return null;
+		return new ArrayList<Employee>(employees.values());
 	}
 
 
