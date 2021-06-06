@@ -13,7 +13,10 @@ public class PaydayTransaction implements Transaction {
 	public void execute() {
 		// TODO Auto-generated method stub
 		List<Employee> employeeList = PayrollDatabase.listEmployee();
-		
+		for(Employee employee :	employeeList){
+			Paycheck paycheck = new Paycheck();
+			
+		}
 
 	}
 
