@@ -4,6 +4,7 @@ public class Paycheck {
 
 	private int empId;
 	private String name;
+	private double amount;
 
 	public int getEmpId() {
 		// TODO Auto-generated method stub
@@ -37,7 +38,8 @@ public class Paycheck {
 		
 	}
 
-	public void setAmount(double calculatePay) {
+	public void setAmount(double amount) {
+		this.amount = amount;
 		// TODO Auto-generated method stub
 		
 	}
