@@ -1,6 +1,10 @@
 package payroll.trans;
 
+import java.util.List;
+
+import payroll.Employee;
 import payroll.Paycheck;
+import payroll.PayrollDatabase;
 import payroll.Transaction;
 
 public class PaydayTransaction implements Transaction {
@@ -8,6 +12,8 @@ public class PaydayTransaction implements Transaction {
 	@Override
 	public void execute() {
 		// TODO Auto-generated method stub
+		List<Employee> employeeList = PayrollDatabase.listEmployee();
+		
 
 	}
 
