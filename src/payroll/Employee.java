@@ -45,6 +45,10 @@ public class Employee {
 	public void setPaymentMethod(PaymentMethod paymentMethod) {
 		this.paymentMethod = paymentMethod;
 	}
+	public void pay(Paycheck paycheck) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	

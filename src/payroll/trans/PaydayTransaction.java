@@ -15,7 +15,8 @@ public class PaydayTransaction implements Transaction {
 		List<Employee> employeeList = PayrollDatabase.listEmployee();
 		for(Employee employee :	employeeList){
 			Paycheck paycheck = new Paycheck();
-			
+			employee.pay(paycheck);
+			paychecks.put(paycheck.getEmpId(),paycheck);
 		}
 
 	}
