@@ -18,7 +18,7 @@ public class Paycheck {
 
 	public double getAmount() {
 		// TODO Auto-generated method stub
-		return 0;
+		return amount;
 	}
 
 	public Object getDisposition() {
