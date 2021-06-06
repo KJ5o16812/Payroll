@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import payroll.Employee;
+import payroll.Paycheck;
 import payroll.PayrollDatabase;
 import payroll.trans.AddSalariedEmployeeTransaction;
 import payroll.trans.PaydayTransaction;
