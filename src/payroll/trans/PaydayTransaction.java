@@ -27,7 +27,7 @@ public class PaydayTransaction implements Transaction {
 
 	public Paycheck getPaycheck(int empId) {
 		// TODO Auto-generated method stub
-		return null;
+		return paychecks.get(empId);
 	}
 
 	
