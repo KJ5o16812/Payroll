@@ -5,6 +5,7 @@ public class Paycheck {
 	private int empId;
 	private String name;
 	private double amount;
+	private String disposition;
 
 	public int getEmpId() {
 		// TODO Auto-generated method stub
@@ -40,6 +41,12 @@ public class Paycheck {
 
 	public void setAmount(double amount) {
 		this.amount = amount;
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setDisposition(String disposition) {
+		this.disposition = disposition;
 		// TODO Auto-generated method stub
 		
 	}
