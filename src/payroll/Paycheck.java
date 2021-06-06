@@ -2,9 +2,9 @@ package payroll;
 
 public class Paycheck {
 
-	public Object getEmpId() {
+	public int getEmpId() {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
 	public Object getName() {
