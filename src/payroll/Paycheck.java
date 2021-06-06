@@ -37,6 +37,11 @@ public class Paycheck {
 		
 	}
 
+	public void setAmount(double calculatePay) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 
 }
