@@ -16,7 +16,7 @@ public class MailMethod extends PaymentMethod {
 	}
 	public String getDisposition() {
 		// TODO Auto-generated method stub
-		return null;
+		return "MAIL"+"address";
 	}
 
 }
